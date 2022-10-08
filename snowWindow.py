@@ -7,3 +7,4 @@
   #Redefine the bottom of the screen as where the pixel is
 #Implement a number of snowFlake objects
 
+#Have two files - main and snowflakeClass

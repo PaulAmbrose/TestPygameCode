@@ -3,7 +3,7 @@ from pygame.locals import *
 import random
 
 
-class flake():
+class snowFlake():
 
     def __init__(self, window, windowWidth, windowHeight):
         self.window = window

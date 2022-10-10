@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 import sys
-from snowFlakeClass import *
+from snowFlake import *
 
 BLACK = (0, 0, 0)
 WINDOW_WIDTH = 640
@@ -16,7 +16,7 @@ clock = pygame.time.Clock()
 ballList = []
 for oBall in range(0, N_BALLS):
 
-    oBall = flake(window, WINDOW_WIDTH, WINDOW_HEIGHT)
+    oBall = snowFlake(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     ballList.append(oBall)
 
 while True:

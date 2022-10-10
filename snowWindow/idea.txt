@@ -3,8 +3,10 @@
 
 #Steps
 #Create a window
-#Create a snowflakeclass, which creates a random flake (white pixel) which descdends the screen and stops at the bottom
-  #Redefine the bottom of the screen as where the pixel is
+#Create a snowflakeclass, which creates a random flake (white pixel) which descdends the screen and stops at the bottom increments
+    If it a)hits the bottom its colour changes marginally
+    b)hit the bottom or another item with the changed colour then stops.  If colour has not been changed, it is changed.
+
 #Implement a number of snowFlake objects
 
 #Have two files - main and snowflakeClass

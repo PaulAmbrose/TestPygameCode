@@ -12,7 +12,7 @@ BLACK = (0, 0, 0)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
-N_FLAKES = 3
+N_FLAKES = 10
 
 # 3 - Initialize the world
 pygame.init()

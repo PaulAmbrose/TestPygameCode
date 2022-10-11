@@ -29,7 +29,7 @@ class flakes():
 
         # Choose a random speed between -4 and 4, but not zero
         # in both the x and y directions
-        speedsList = [-4, -3, -2, -1, 1, 2, 3, 4]
+        speedsList = [1, 2, 3, 4]
 
         #self.xSpeed = random.choice(speedsList)
         self.xSpeed = 0
@@ -38,11 +38,14 @@ class flakes():
 
     def update(self):
         # Check for hitting a wall.  If so, change that direction.
-        if (self.x < 0) or (self.x >= self.maxWidth):
-            self.xSpeed = -self.xSpeed
 
-        if (self.y < 0) or (self.y >= self.maxHeight):
-            self.ySpeed = -self.ySpeed
+        # if (self.x < 0) or (self.x >= self.maxWidth):
+        #    self.xSpeed = -self.xSpeed
+
+        # if (self.y < 0) or (self.y >= self.maxHeight):
+        #    self.ySpeed = -self.ySpeed
+        if self.y >= self.maxHeight:
+            self.ySpeed = 0
 
         # Update the flakes's x and y, using the speed in two directions
         self.x = self.x + self.xSpeed

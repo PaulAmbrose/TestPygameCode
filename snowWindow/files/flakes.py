@@ -2,36 +2,43 @@ import pygame
 from pygame.locals import *
 import random
 
+# flakes class
 
-class snowFlake():
+
+class flakes():
 
     def __init__(self, window, windowWidth, windowHeight):
-        self.window = window
+        self.window = window  # remember the window, so we can draw later
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
-        self.WHITE = (0, 0, 0)
 
-        self.image = pygame.draw.circle(window, self.WHITE, (250, 50), 1, 0)
-        flakeRect = self.image.get_rect()
-        self.width = flakeRect.width
-        self.height = flakeRect.height
+        self.image = pygame.image.load('images/flakes.png')
+        # A rect is made up of [x, y, width, height]
+        flakesRect = self.image.get_rect()
+        self.width = flakesRect.width
+        self.height = flakesRect.height
         self.maxWidth = windowWidth - self.width
         self.maxHeight = windowHeight - self.height
 
+        # Pick a random starting position
         self.x = random.randrange(0, self.maxWidth)
-        self.y = 0
+        self.y = random.randrange(0, self.maxHeight)
 
+        # Choose a random speed between -4 and 4, but not zero
+        # in both the x and y directions
         speedsList = [-4, -3, -2, -1, 1, 2, 3, 4]
         self.xSpeed = random.choice(speedsList)
         self.ySpeed = random.choice(speedsList)
 
     def update(self):
+        # Check for hitting a wall.  If so, change that direction.
         if (self.x < 0) or (self.x >= self.maxWidth):
             self.xSpeed = -self.xSpeed
 
         if (self.y < 0) or (self.y >= self.maxHeight):
             self.ySpeed = -self.ySpeed
 
+        # Update the flakes's x and y, using the speed in two directions
         self.x = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
 

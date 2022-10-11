@@ -2,6 +2,8 @@ import pygame
 from pygame.locals import *
 import random
 
+WHITE = (255, 255, 255)
+
 # flakes class
 
 
@@ -12,7 +14,8 @@ class flakes():
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
 
-        self.image = pygame.image.load('images/flakes.png')
+        self.image = pygame.image.load('images/flake.png')
+
         # A rect is made up of [x, y, width, height]
         flakesRect = self.image.get_rect()
         self.width = flakesRect.width

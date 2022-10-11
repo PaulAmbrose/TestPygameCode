@@ -12,7 +12,7 @@ BLACK = (0, 0, 0)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
-N_FLAKES = 10
+MAX_FLAKES = 150
 
 # 3 - Initialize the world
 pygame.init()
@@ -23,7 +23,8 @@ clock = pygame.time.Clock()
 
 # 5 - Initialize variables
 flakesList = []
-for oflakes in range(0, N_FLAKES):
+# for oflakes in range(0, MAX_FLAKES):
+while len(flakesList) < MAX_FLAKES:
     # Each time through the loop, create a flakes object
     oflakes = flakes(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     flakesList.append(oflakes)  # append the new flakes to the list of flakess

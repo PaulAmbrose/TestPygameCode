@@ -1,4 +1,6 @@
-# pygame demo 6(b) - using the flakes class, bounce many flakess
+# pygame demo 6(b) - using the flakes class, window to fill up with snow from the bottom.
+
+# parked until can do work with surfaces/sprites to allow aggreagation of snow flakes
 
 # 1 - Import packages
 import pygame

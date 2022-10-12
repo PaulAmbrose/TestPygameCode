@@ -20,16 +20,8 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
 # 4 - Load assets: image(s), sounds, etc.
-
-# 5 - Initialize variables
 flakesList = []
-# for oflakes in range(0, MAX_FLAKES):
-while len(flakesList) < MAX_FLAKES:
-    # Each time through the loop, create a flakes object
-    oflakes = flakes(window, WINDOW_WIDTH, WINDOW_HEIGHT)
-    flakesList.append(oflakes)  # append the new flakes to the list of flakess
-
-# 6 - Loop forever
+# 5 - Loop forever
 while True:
 
     # 7 - Check for and handle events
@@ -37,6 +29,12 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
+        # 6 - Initialize variables
+    # Each time through the loop, create a flakes object
+    oflakes = flakes(window, WINDOW_WIDTH, WINDOW_HEIGHT)
+    # append the new flakes to the list of flakess
+    flakesList.append(oflakes)
 
     # 8 - Do any "per frame" actions
     for oflakes in flakesList:

@@ -4,7 +4,6 @@
 import pygame
 from pygame.locals import *
 import sys
-import random
 from flakes import *  # bring in the flakes class code
 
 # 2 - Define constants
@@ -12,7 +11,6 @@ BLACK = (0, 0, 0)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
-MAX_FLAKES = 150
 
 # 3 - Initialize the world
 pygame.init()
@@ -24,13 +22,13 @@ flakesList = []
 # 5 - Loop forever
 while True:
 
-    # 7 - Check for and handle events
+    # 6 - Check for and handle events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-        # 6 - Initialize variables
+    # 7 - Initialize variables
     # Each time through the loop, create a flakes object
     oflakes = flakes(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     # append the new flakes to the list of flakess

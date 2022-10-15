@@ -1,0 +1,3 @@
+A small python file which collects information from the user about simple button interfaces and creates a main file in python for the user to then apply.
+
+Will create a text file and populate with the relevant code.

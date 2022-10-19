@@ -1,4 +1,4 @@
-#filename = paul
+#filename = p
 #Paul Ambrose -221019
 
 import pygame
@@ -7,8 +7,8 @@ from SimpleButton import *
 import sys
 
 GRAY = (200, 200, 200)
-WINDOW_WIDTH = 5
-WINDOW_HEIGHT = 5
+WINDOW_WIDTH = 32
+WINDOW_HEIGHT = 2
 FRAMES_PER_SECOND = 30
 
 pygame.init()

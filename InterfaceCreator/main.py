@@ -37,8 +37,53 @@ with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'w') as f
             )
 f.close()
 
+counter = 0
+vPosition = 25
 for buttons in range(1, int(buttonNumber)):
+
+    buttonName = input(
+        "What would you like to call button " + str(counter) + " ? >> ")
+
     with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
-        f.write(
-        )
+        f.write('oButton' + str(counter) + ' = SimpleButton(window, (' + str(vPosition) + ', 30),\n'
+                '\t\t\t\t\timages/buttonAUp.png,\n'
+                '\t\t\t\t\timages/buttonADown.png)\n')
+    counter = counter + 1
+    vPosition = vPosition + 100
+f.close()
+
+with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
+    f.write('\nwhile True:\n\n'
+
+            'for event in pygame.event.get():\n'
+            'if event.type == pygame.QUIT:\n'
+            '\t\tpygame.quit()\n'
+            '\t\tsys.exit()\n\n'
+            )
+f.close()
+
+counter = 0
+for buttons in range(1, int(buttonNumber)):
+
+    with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
+        f.write('if oButton + str(counter).handleEvent(event):\n'
+                '\tpass\n')
+    counter = counter + 1
+f.close()
+
+with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
+    f.write('window.fill(GRAY)\n')
+f.close()
+
+counter = 0
+for buttons in range(1, int(buttonNumber)):
+
+    with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
+        f.write('if oButton + str(counter).draw():\n')
+    counter = counter + 1
+f.close()    # 10 - Draw all window elements
+
+with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
+    f.write('pygame.display.update()\n'
+            'clock.tick(FRAMES_PER_SECOND)\n')
 f.close()

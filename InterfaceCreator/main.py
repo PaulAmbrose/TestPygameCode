@@ -37,9 +37,9 @@ with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'w') as f
             )
 f.close()
 
-counter = 0
+counter = 1
 vPosition = 25
-for buttons in range(1, int(buttonNumber)):
+for buttons in range(0, int(buttonNumber)):
 
     buttonName = input(
         "What would you like to call button " + str(counter) + " ? >> ")
@@ -62,8 +62,8 @@ with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f
             )
 f.close()
 
-counter = 0
-for buttons in range(1, int(buttonNumber)):
+counter = 1
+for buttons in range(0, int(buttonNumber)):
 
     with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
         f.write('if oButton + str(counter).handleEvent(event):\n'
@@ -75,8 +75,8 @@ with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f
     f.write('window.fill(GRAY)\n')
 f.close()
 
-counter = 0
-for buttons in range(1, int(buttonNumber)):
+counter = 1
+for buttons in range(0, int(buttonNumber)):
 
     with open(filePath + '\interface_' + fileName + formattedDate + ".py", 'a') as f:
         f.write('if oButton + str(counter).draw():\n')

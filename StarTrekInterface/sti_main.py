@@ -1,4 +1,6 @@
 # A Star Trek NG style interface using drawing and widgit
+#
+
 
 import pygame
 from pygame.locals import *
@@ -9,8 +11,8 @@ from os import sys
 BLACK = (0, 0, 0)
 GRAY = (128, 128, 128)
 WHITE = (255, 255, 255)
-WINDOW_WIDTH = 640
-WINDOW_HEIGHT = 480
+WINDOW_WIDTH = 1400
+WINDOW_HEIGHT = 750
 FRAMES_PER_SECOND = 30
 N_PIXELS_PER_FRAME = 3
 
@@ -59,9 +61,6 @@ while True:
 
         if oRestartButton.handleEvent(event):
             counter = 0
-
-        if oHitMeButton.handleEvent(event):
-            print('Do not hit me')
 
         if oUserInputA.handleEvent(event):
             userText = oUserInputA.getText()
